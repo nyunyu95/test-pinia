@@ -15,7 +15,7 @@ export const useProjectStore = defineStore('project', {
     async fetch () {
       await new Promise(resolve => {
         setTimeout(() => {
-          const project = { id: 1, name: 'my project' }
+          const project = { id: Math.floor(Math.random() * 100), name: 'my project' }
           this.project = project
           resolve()  
         }, 500)
