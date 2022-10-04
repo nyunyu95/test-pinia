@@ -1,15 +1,15 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
+  <div>
+    <div class="text-center">
+      <div cols="12">
         <p>View A</p>
         <p>store value: {{ anotherTest }}</p>
         <div>
-          <v-btn @click="$router.push({ name: 'view-b' })">Go to View B</v-btn>
+          <button @click="$router.push({ name: 'view-b' })">Go to View B</button>
         </div>
-      </v-col>
-    </v-row>
-  </v-container>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
