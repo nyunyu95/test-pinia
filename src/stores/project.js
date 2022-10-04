@@ -1,23 +1,25 @@
-import { defineStore, acceptHMRUpdate } from 'pinia'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useProjectStore = defineStore('project', {
   state: () => ({
-    project: null
+    currentProject: null
   }),
   getters: {
-    getProject: state => state.project,
+    getProjectId: state => state.currentProject?.id ?? null,
+    getProject: (state) => state.currentProject,
+    getProjectItems: state => state.currentProject?.items ? [...state.currentProject.items] : null,
     getReferences: () => ['a', 'b', 'c']
   },
   actions: {
     clear () {
-      this.project = null
+      this.$reset()
     },
     async fetch () {
       await new Promise(resolve => {
         setTimeout(() => {
-          const project = { id: Math.floor(Math.random() * 100), name: 'my project' }
-          this.project = project
-          resolve()  
+          const item = { id: Math.floor(Math.random() * 100), name: 'my project', items: ['a', 'b', 'c'] }
+          this.currentProject = { ...item }
+          resolve()
         }, 500)
       })
     }
