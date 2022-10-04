@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "pinia": "^2.0.22",
+    "pinia-plugin-persistedstate": "^2.2.0",
     "vue": "^2.7.0",
     "vue-router": "^3.6.5"
   },

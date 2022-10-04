@@ -4,8 +4,8 @@ import { computed, ref } from 'vue'
 export const useProjectSetupStore = defineStore('projectSetup', () => {
   const currentProject = ref(null)
 
-  const getProject = computed(() => currentProject.value)
-  const getProjectId = computed(() => currentProject.value?.id)
+  const getProject = computed(() => currentProject.value ?? null)
+  const getProjectId = computed(() => currentProject.value?.id ?? null)
   const getReferences = computed(() => ['a', 'b', 'c'])
   const getProjectItems = computed(() => currentProject.value?.items ? [...currentProject.value.items] : null)
 
