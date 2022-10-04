@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { useAnotherStore } from '@/stores/another';
+import { useAnotherStore } from '../stores/another';
 import { mapState } from 'pinia';
 
 export default {

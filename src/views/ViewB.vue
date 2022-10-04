@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { useProjectStore } from '@/stores/project';
+import { useProjectStore } from '../stores/project';
 import { mapActions, mapState } from 'pinia';
 
 export default {
