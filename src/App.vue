@@ -4,8 +4,8 @@
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  text-align: center;
+<script>
+export default {
+  name: 'App'
 }
-</style>
+</script>
